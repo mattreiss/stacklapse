@@ -12,11 +12,12 @@ for (let feature in features) {
 	let pages = features[feature];
 	for (let pageName in pages) {
 		const FeaturePage = pages[pageName];
-		console.log(`${pageName}.route = "${FeaturePage.route}"`);
-		if (FeaturePage.route) {
+		if (FeaturePage.route && !routes[FeaturePage.route]) {
 			routes[FeaturePage.route] = FeaturePage;
+		} else if (routes[FeaturePage.route]) { 
+			console.warn(`Duplicate ${pageName}.route = "${FeaturePage.route}"`);
 		} else {
-			console.warn(`${pageName}.route = "${FeaturePage.route}"`);
+			console.warn(`Missing ${pageName}.route = "${FeaturePage.route}"`);
 		}
 	}
 }
@@ -39,7 +40,6 @@ const PageNotFound = () => {
 
 const Navigation = () => {
 	const [state] = React.useContext(Context);
-	console.log('Navigation', state.route);
 	const FeaturePage = routes[state.route];
 	if (FeaturePage) {
 		return <FeaturePage />;

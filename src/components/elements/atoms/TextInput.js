@@ -30,9 +30,7 @@ const TextInput = (props) => {
 };
 
 TextInput.propTypes = {
-    /** options to select from */
-    options: PropTypes.array.isRequired,
-    /** value of the select */
+    /** value of the input */
     value: PropTypes.any.isRequired,
     /** onChange callback function */
     onChange: PropTypes.func,
