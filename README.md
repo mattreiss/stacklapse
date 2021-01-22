@@ -1,7 +1,4 @@
-Install
-```
-sudo apt-get install libqt5gui5
-```
+Currently only supports Mac OS
 
 Run
 ```
