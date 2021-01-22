@@ -1,0 +1,40 @@
+{
+  "name": "stacklapse",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "babel-node index.js",
+    "dev": "webpack --mode=development ",
+    "webpackRun": "babel-node dist/index.out.js",
+    "clean": "rm -rf bin out dist",
+    "build": "yarn clean; babel index.js -d bin/; babel src -d bin/src",
+    "package-modules": "mkdir -p out/node_modules/node-qt-napi;  cp -r node_modules/* out/node_modules/",
+    "package": "yarn build; yarn package-modules; npx nexe bin/index.js -o out/stacklapse --build"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.3.7",
+    "@babel/runtime": "^7.12.5",
+    "@babel/runtime-corejs3": "^7.12.5",
+    "graphql": "^15.4.0",
+    "node-fetch": "^2.6.1",
+    "node-notifier": "^9.0.0",
+    "photoshop-scripts": "^1.0.2",
+    "prop-types": "^15.7.2",
+    "proton-native": "^2.0.0",
+    "react": "^16.8.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-stage-0": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
