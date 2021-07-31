@@ -1563,9 +1563,9 @@ camelcase@^5.0.0:
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
 caniuse-lite@^1.0.30001173:
-  version "1.0.30001179"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001179.tgz#b0803883b4471a6c62066fb1752756f8afc699c8"
-  integrity sha512-blMmO0QQujuUWZKyVrD1msR4WNDAqb/UPO1Sw2WWsQ7deoM5bJiicKnWJ1Y0NS/aGINSnKPIWBMw5luX+NDUCA==
+  version "1.0.30001248"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001248.tgz"
+  integrity sha512-NwlQbJkxUFJ8nMErnGtT0QTM2TJ33xgz4KXJSMIrjXIbDVdaYueGyjOrLKRtJC+rTiWfi6j5cnZN1NBiSBJGNw==
 
 chalk@^2.0.0, chalk@^2.4.2:
   version "2.4.2"
@@ -3528,10 +3528,10 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-photoshop-scripts@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/photoshop-scripts/-/photoshop-scripts-1.0.2.tgz#fd0afd29d4827cef7b97373635fd65c8d43ef70b"
-  integrity sha512-+ilsjjUphe3Cn0/LBzUOP8l/aGw7zWmSddxR/ok8eFVOFIk7UJxampMhHZ5p3wRUDokzfRhTAlVXe/HSSVZN5Q==
+photoshop-scripts@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/photoshop-scripts/-/photoshop-scripts-1.0.3.tgz#e5040732c25afa868c7a60019ca14d69ec5614a3"
+  integrity sha512-r6MetzlVk5qW79kYts+ZYV74LCmyQ4EkDqEh13nWgdUPn1o2w3gSfwDsOoD911KRuURs80N31OZgVV83TorSUw==
 
 picomatch@^2.0.4, picomatch@^2.2.1:
   version "2.2.2"

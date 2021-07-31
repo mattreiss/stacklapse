@@ -18,7 +18,7 @@
     "graphql": "^15.4.0",
     "node-fetch": "^2.6.1",
     "node-notifier": "^9.0.0",
-    "photoshop-scripts": "^1.0.2",
+    "photoshop-scripts": "^1.0.3",
     "prop-types": "^15.7.2",
     "proton-native": "^2.0.0",
     "react": "^16.8.3"
