@@ -32,7 +32,7 @@ const Select = (props) => {
                         color: state.theme.colors.text1,
                     }}
                     key={v}
-                    label={v} />
+                    label={`${v}`} />
             ))}
         </Picker>
     )

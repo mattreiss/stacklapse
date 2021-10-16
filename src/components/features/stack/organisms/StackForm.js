@@ -24,19 +24,32 @@ const VideoOptions = [
 	'2304@24',
 ]
 
+const Effects = [
+	'commet',
+	'reverseCommet'
+]
+
+const GrowthMode = {
+	grow: 1,
+	decay: 2,
+	both: 3
+}
+
+const GrowthOptions = Object.keys(GrowthMode);
+
 const StackForm = () => {
 	const [blendMode, setBlendMode] = React.useState(BlendMode.LIGHTEN);
-	const [effect, setEffect] = React.useState('commet');
+	const [effect, setEffect] = React.useState(Effects[0]);
 	const [stackLength, setStackLength] = React.useState(32);
-	const [stackGrowth, setStackGrowth] = React.useState(1);
+	const [stackGrowth, setStackGrowth] = React.useState(GrowthOptions[0]);
 	const [autoAlign, setAutoAlign] = React.useState(false);
 	const [action, setAction] = React.useState('Action');
 	const [displacement, setDisplacement] = React.useState(1);
-	const [video, setVideo] = React.useState('1080@24');
+	const [video, setVideo] = React.useState(VideoOptions[3]);
 	const [delayLength, setDelayLength] = React.useState(0);
 	const [growEvery, setGrowEvery] = React.useState(1);
 	const [stackOnce, setStackOnce] = React.useState(false);
-	const [selectedFolder, setSelectedFolder] = React.useState('~/Desktop/sunset');
+	const [selectedFolder, setSelectedFolder] = React.useState('~/Desktop/');
 	
 	const onPressStack = async () => {
 		console.log('stack')
@@ -44,7 +57,7 @@ const StackForm = () => {
 			blendMode,
 			effect,
 			stackLength,
-			stackGrowth,
+			stackGrowth: GrowthMode[stackGrowth],
 			autoAlign,
 			action,
 			displacement,
@@ -89,6 +102,22 @@ const StackForm = () => {
 					value={video}
 					onChange={setVideo}
 					options={VideoOptions}
+				/>
+			</Row>
+			<Row>
+				<Text>Effect</Text>
+				<Select
+					value={effect}
+					onChange={setEffect}
+					options={Effects}
+				/>
+			</Row>
+			<Row>
+				<Text>Growth</Text>
+				<Select
+					value={stackGrowth}
+					onChange={setStackGrowth}
+					options={GrowthOptions}
 				/>
 			</Row>
 			<Row>
